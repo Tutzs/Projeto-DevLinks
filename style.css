@@ -87,16 +87,21 @@ só funciona se o display foi inline
     z-index: 1;
     top: 50%;
     transform: translateY(-50%);
+
+    animation: slideback 0.2s forwards;
 }
 
 .light #switch button{
-    left: 0;
-    right: initial;
+   animation: slide 0.2s forwards;
+}
+
+#switch button:hover{
+    outline: 8px solid var(--highlight-color);
 }
 
 #switch span{
     display: block;
-    width: 64px;
+    width: 60px;
     height: 24px;
 
     background: var(--surface-color);
@@ -180,4 +185,26 @@ footer{
     .light{
         --background: url(./assets/bg-desktop-light.jpg);
     }
+}
+
+
+/*animation*/
+
+@keyframes slide {
+    from{
+        left: 0;
+    }
+    to{
+        left: 50%;
+    }
+}
+
+@keyframes slideback {
+    from{
+        left: 50%;
+    }
+    to {
+        left: 0;
+    }
+    
 }
