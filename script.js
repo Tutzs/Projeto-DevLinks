@@ -16,10 +16,10 @@ function toggleMode(){
     // substituir a imagem
     if(html.classList.contains('light')){
         // se tiver light mode
-        img.setAttribute('src',  './assets/avatar-light-arthur.png')
+        img.setAttribute('src',  './assets/avatar.png')
     } else {
         // se tiver sem light mode
-        img.setAttribute('src', './assets/avatar.png')
+        img.setAttribute('src', './assets/avatar-light-arthur.png')
     }
 
 }
